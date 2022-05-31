@@ -24,9 +24,12 @@ The purpose of this project is twofold:
 * Flask
 * HTML
 
-
-## Project Description
-### Details
+### Files: All within Missions_to_Mars folder
+* mission_to_mars.ipynb - jupyter notebook file containing code for scraping data sources
+* scrape_mars.py - python script that is just a conversion from the above jupyter notebook
+* app.py - runs flask app to display website
+* templates:
+  *  index.html - website shell/template
 
 ### Data Sources
 <ul>
@@ -35,7 +38,3 @@ The purpose of this project is twofold:
 <li>Facts about the planet (such as diameter, mass, etc) were scraped from:  https://galaxyfacts-mars.com/</li>
 <li>High res images for each hemisphere were scraped from: https://marshemispheres.com/</li>
 </ul>
-### Description of files and locations
-
-
-
