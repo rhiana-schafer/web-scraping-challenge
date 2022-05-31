@@ -37,8 +37,8 @@
         <h2>Mars Hemispheres</h2>
         <ul>
         {% for hemi in mars_data.hemisphere_image_urls %}
-        <!--loop over dict and display each image with text underneath-->>
-        <li><img src= {{ hemi.img_url }} alt={{ hemi.title }}> hemi.title </li>      
+        <!--loop over dict and display each image with text underneath-->
+        <li><img src= {{ hemi.img_url }} alt={{ hemi.title }}> {{hemi.title}} </li>      
         {% endfor %}
     </ul>
         
