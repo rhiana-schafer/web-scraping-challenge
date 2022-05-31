@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <!-- Render our data -->
+      <h1>Mission to Mars</h1>
+      <a href="/scrape"><button class="btn btn-coutline-light">Scrape New Data</button></a>
+    </div>
+    <div>
+        <h2>Latest Mars News</h2>
+        <h3>{{ mars_data.news_title }}</h3>
+        <p>{{ mars_data.news_p }}</p>
+
+    </div>
+    <div>
+        <h2>Featured Mars Image</h2>
+        <img src= {{ mars_data.featured_image_url }} alt="Featured Mars Image">
+
+    </div>
+    <div>
+        <h2>Mars Facts</h2>
+        {{ mars_data.html_table|safe }}
+
+    </div>
+    <div>
+        <h2>Mars Hemispheres</h2>
+        <ul>
+        {% for hemi in mars_data.hemisphere_image_urls %}
+        <!--loop over dict and display each image with text underneath-->>
+        <li><img src= {{ hemi.img_url }} alt={{ hemi.title }}> hemi.title </li>      
+        {% endfor %}
+    </ul>
+        
+
+    </div>
+  </div>
+</body>
+
+</html>
